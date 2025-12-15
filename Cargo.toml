@@ -1,0 +1,26 @@
+[package]
+name = "tcp-chat-v2"
+version = "0.0.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+mini-redis = "0.4"
+
+chrono = "0.4"
+
+tracing = "0.1.43"
+tracing-subscriber = { version = "0.3", features = ["fmt", "time", "env-filter"] }
+tracing-appender = "0.2"
+
+serde = { version = "1.0", features = ["derive"] }
+bincode = { version = "2.0", features = ["serde"] }
+
+[dependencies.uuid]
+version = "1.19.0"
+# Lets you generate random UUIDs
+features = [
+    "v4",
+    "serde"
+]
+
